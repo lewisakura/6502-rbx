@@ -1,0 +1,11 @@
+{
+    "name": "6502-rbx",
+    "tree": {
+        "$className": "DataModel",
+
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "$path": "src/"
+        }
+    }
+}
