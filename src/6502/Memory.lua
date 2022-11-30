@@ -1,7 +1,7 @@
 local internal = require(script.Parent.Internal)
 
 local memory = {
-    memory = {} :: {[string]: number},
+    memory = {} :: {[number]: number},
     registers = {
         x = 0,
         y = 0
@@ -28,11 +28,11 @@ end
 
 -- get around 0 index limitations of lua
 function memory:_Read(address: number)
-    return self.memory[tostring(address)]
+    return self.memory[address + 1]
 end
 
 function memory:_Write(address: number, data: number)
-    self.memory[tostring(address)] = data
+    self.memory[address + 1] = data
 end
 
 function memory:Read(address: number): number
